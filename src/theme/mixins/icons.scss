@@ -1,0 +1,110 @@
+@mixin icon( $value, $el:'before') {
+
+    width: $btn-size;
+    height: $btn-size;
+    color: $btn-color;
+
+    &:before, &:after {
+        font-family: 'icomoon';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        display: inline-block;
+        font-size: $icon-big-font-size;
+        position: absolute;
+        top: $btn-top-padding;
+        text-align: center;
+        width: 100%;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @if $el == 'before' or $el == 'after' {
+        &:#{$el} {
+
+            @if $value == 'icon-close' {
+                content: '\f00d';
+            }
+            @if $value == 'icon-minus' {
+                content: '\f068';
+            }
+            @if $value == 'icon-plus' {
+                content: '\f067';
+            }
+            @if $value == 'icon-remove' {
+                content: '\f00d';
+            }
+            @if $value == 'icon-times' {
+                content: '\f00d';
+            }
+            @if $value == 'icon-cog' {
+                content: '\f013';
+            }
+            @if $value == 'icon-gear' {
+                content: '\f013';
+            }
+
+            @if $value == 'icon-navi' {
+                content: '\f0c9';
+            }
+
+            @if $value == 'icon-chevron-down' {
+                content: '\f078';
+            }
+            @if $value == 'icon-chevron-left' {
+                content: '\f053';
+            }
+            @if $value == 'icon-chevron-right' {
+                content: '\f054';
+            }
+            @if $value == 'icon-chevron-up' {
+                top: 10px;
+                content: '\f077';
+            }
+            @if $value == 'icon-cross' {
+                content: '\e905';
+            }
+
+            @if $value == 'align-justify' {
+                content: '\e900';
+            }
+            @if $value == 'check' {
+                content: '\e901';
+            }
+            @if $value == 'chevron-down2' {
+                content: '\e902';
+            }
+            @if $value == 'chevron-left2' {
+                content: '\e903';
+            }
+            @if $value == 'chevron-right2' {
+                content: '\e904';
+            }
+            @if $value == 'chevron-up2' {
+                content: '\e905';
+            }
+            @if $value == 'comment-square' {
+                content: '\e906';
+            }
+            @if $value == 'info' {
+                content: '\e907';
+            }
+            @if $value == 'menu' {
+                content: '\e909';
+            }
+            @if $value == 'x' {
+                content: '\e908';
+            }
+
+        }
+    } @else {
+        @warn '`#{$el}` is not a valid pseudo-element.';
+    }
+
+}
+
+

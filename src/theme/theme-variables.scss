@@ -1,0 +1,92 @@
+/*
+ * Application global variables.
+*/
+
+$gray-dark:                 #3c3c3c;
+$gray:                      #555;
+$gray-light:                #999;
+$gray-lighter:              #eceeef;
+$gray-lightest:             #f7f7f9;
+$white:                     #fff;
+
+$brand-primary:             #df007e;
+$brand-success:             #5cb85c;
+$brand-info:                #5bc0de;
+$brand-warning:             #f0ad4e;
+$brand-danger:              #d9534f;
+$brand-inverse:             $gray-dark;
+
+$c-light-blue:              #78c1ff;
+$c-dark-blue:               #1b8ae7;
+$c-dark-blue2:              #558fc0;
+
+$link-color:                $gray-light;
+$navi-color:                $gray-dark;
+$navi-hover-color:          $white;
+
+
+/**
+* DIMENSIONS
+ */
+$large-screen:              1400px;
+$medium-screen:             1040px;
+$small-screen:              810px;
+$xsamll-screen:             624px;
+
+$navi-width:                300px;
+
+$teaser-height:             250px;
+$teaser-height-medium:      192px;
+$teaser-height-small:       145px;
+
+$carousel-height-small:     $teaser-height-small * 2;
+
+/**
+* FONTSIZES
+ */
+
+$base-font-size: 1rem;
+$small-font-size: 0.8rem;
+$xsmall-font-size: 0.7rem;
+$teaser-font-size: 1.2rem;
+
+
+/**
+* FONTS
+ */
+
+$base-font-family: 'Roboto', sans-serif;
+$headline-font-family: 'Oswald', sans-serif;
+
+
+/**
+* ANIMATIONS
+ */
+
+$base-transition: all .5s ease-out;
+$translate-transition: translate .5s ease-out;
+
+
+/**
+* NEAT
+ */
+
+$custom-grid--no-margin: (
+    columns: 12,
+    gutter: 0,
+);
+
+
+/**
+*Icons
+ */
+
+$btn-size: 47px;
+$btn-top-padding: 0;
+$btn-color: $white;
+$icon-big-font-size: 2.6rem;
+
+
+$smal-icon-size: 20px;
+
+

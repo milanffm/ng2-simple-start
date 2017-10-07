@@ -1,0 +1,153 @@
+@mixin teaser (){
+
+    .teaser-link{
+        text-transform: uppercase;
+        font-family: $headline-font-family;
+        font-size: $teaser-font-size;
+    }
+
+    .teaser {
+        background:  $gray-light;
+        padding: 15px;
+        height: $teaser-height;
+        margin: 0;
+        color: $white;
+        line-height: 1.5;
+    }
+
+    .teaser-text-fixed, .small .teaser-link {
+        background:  $gray-light;
+        @include new-transition ($base-transition);
+
+        &:hover {
+            background: $brand-primary;
+        }
+
+        a {
+            color: $white;
+        }
+    }
+
+    .teaser-text-fixed {
+        @include position(absolute, 10px 10px null null);
+        display: block;
+        @include padding(5px $smal-icon-size 5px 5px);
+
+    }
+
+    .medium .teaser-link {
+        a {
+            color: $white;
+        }
+    }
+
+    .teaser-link {
+        a {
+            &:hover {
+                .teaser-text-fixed {
+                    background: $brand-primary;
+                }
+            }
+        }
+    }
+
+    .small .teaser-link {
+        height: $teaser-height;
+        text-align: center;
+
+        a.big-link {
+            width: 100%;
+            display: block;
+            height: $teaser-height;
+            line-height: $teaser-height;
+            position: relative;
+
+            .icon {
+                top: 117px;
+                margin-left: -10px;
+            }
+        }
+    }
+
+    .small .image {
+        .icon {
+            right: 9px;
+        }
+    }
+
+
+    .medium .teaser-link .icon, .small .teaser-link .icon {
+        @include icon('chevron-right2');
+        position: absolute;
+        top: 6px;
+        display: inline;
+        width: $smal-icon-size;
+        height: $smal-icon-size;
+        &:before {
+            font-size: 1rem;
+        }
+
+    }
+
+    @media all and (max-width: $medium-screen) {
+        .small .teaser-link, .teaser  {
+            height: $teaser-height-medium;
+
+        }
+
+        .teaser {
+            font-size: $small-font-size;
+        }
+
+        .small .teaser-link a.big-link {
+            line-height: $teaser-height-medium;
+            height: $teaser-height-medium;
+            .icon {
+                top: 89px;
+            }
+        }
+
+    }
+
+    @media all and (max-width: $small-screen) {
+        .small .teaser-link, .teaser  {
+            height: $teaser-height-small;
+
+        }
+
+        .teaser {
+            padding: 5px;
+            font-size:$xsmall-font-size ;
+            line-height: 1.3;
+
+        }
+
+        .small .teaser-link a.big-link {
+            line-height: $teaser-height-small;
+            height: $teaser-height-small;
+            .icon {
+                top: 60px;
+            }
+        }
+    }
+
+    @media all and (max-width: $xsamll-screen) {
+        .teaser {
+            padding: 15px;
+            font-size:$base-font-size ;
+            line-height: 1.3;
+
+        }
+
+        .small .teaser-link, .teaser  {
+            height: auto;
+
+        }
+
+        .small .teaser-link a.big-link {
+            .icon {
+                top: 64px;
+            }
+        }
+    }
+}

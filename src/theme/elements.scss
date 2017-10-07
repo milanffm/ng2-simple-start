@@ -1,0 +1,46 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+a {
+    text-decoration: none;
+    color: $link-color;
+}
+
+
+
+table tr td,
+table tr th{
+    white-space: nowrap;
+    text-align: right;
+    width: 20%;
+    padding-left: 2%;
+    padding-bottom: 0.5em;
+}
+
+table.left tr th, table.left tr td{
+    text-align: left;
+
+}
+
+table tr th{
+}
+table thead tr th{
+    padding-bottom: 1em;
+    padding-left: 1%;
+}
+table tr th:first-child{
+    text-align: left;
+    width: 34%;
+    padding-left: 0;
+}
+
+
+ul {
+    padding-left: 17px;
+    li {
+        line-height: 1.4;
+    }
+}

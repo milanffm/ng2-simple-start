@@ -1,0 +1,39 @@
+@mixin cols(){
+    .col {
+        line-height: 1;
+        position: relative;
+        img {
+            display: block;
+        }
+    }
+
+    .small {
+        @include grid-column(3, $custom-grid--no-margin);
+
+    }
+
+    .medium  {
+        @include grid-column(6, $custom-grid--no-margin);
+
+
+    }
+
+    .big {
+        @include grid-column(9, $custom-grid--no-margin);
+    }
+
+    .right-col {
+        float: right;
+    }
+
+    @media all and (max-width: $xsamll-screen) {
+        .small, .medium, .big {
+            @include grid-column(12, $custom-grid--no-margin);
+        }
+
+        .small img {
+            margin: 0 auto;
+        }
+    }
+
+}
