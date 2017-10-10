@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="jumbotron text-center">
+        <h1>
+            <span translate>APP_NAME</span>
+        </h1>
+        <p>
+            <i class="fa fa-bookmark-o"></i> <span translate>Version</span> {{version}}
+        </p>
+
+        <ul>
+            <li *ngFor="let post of results" (click)="goToPost( post.slug )">
+
+                <h2>{{ post.title }}</h2>
+                <div [innerHTML]="post.content.extended">
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
