@@ -10,13 +10,8 @@ import { PostService } from '../services/post.service';
 })
 
 export class PostsComponent implements OnInit {
-    results: any;
+    posts: [string];
 
-    goToPost(slug: string) {
-
-        this._router.navigate(['/posts/', slug]);
-
-    }
 
     // Inject HttpClient into your component or service.
     constructor(
@@ -24,8 +19,12 @@ export class PostsComponent implements OnInit {
         private _router: Router,
         private _postService: PostService) {
     }
-    ngOnInit(): void {
-        this.results = this._postService.getPosts();
-        console.log(this.results);
+    ngOnInit() {
+        this._postService.getPosts()
+            .subscribe(resPostData => this.posts = resPostData.posts);
+
+    }
+    goToPost(slug: string) {
+        this._router.navigate(['/posts/', slug]);
     }
 }

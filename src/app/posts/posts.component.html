@@ -5,7 +5,7 @@
         </h1>
 
         <ul>
-            <li *ngFor="let post of results" (click)="goToPost( post.slug )">
+            <li *ngFor="let post of posts" (click)="goToPost( post.slug )">
 
                 <h2>{{ post.title }}</h2>
                 <div [innerHTML]="post.content.extended">

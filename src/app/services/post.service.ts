@@ -1,17 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class PostService {
 
   constructor(private http: HttpClient) {}
 
-  getPosts() {
-    this.http.get('http://localhost:3000/api/post/list').subscribe(data => {
-      // Read the result field from the JSON response.
-      console.log(data['posts']);
-      return data['posts'];
-    });
+  getPosts(): Observable<any> {
+    return this.http.get('http://localhost:3000/api/post/list');
   }
 
 }
