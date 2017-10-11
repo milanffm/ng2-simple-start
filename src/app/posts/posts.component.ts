@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { PostService } from '../services/post.service';
 
@@ -11,11 +10,7 @@ import { PostService } from '../services/post.service';
 
 export class PostsComponent implements OnInit {
     posts: [string];
-
-
-    // Inject HttpClient into your component or service.
     constructor(
-        private _http: HttpClient,
         private _router: Router,
         private _postService: PostService) {
     }
