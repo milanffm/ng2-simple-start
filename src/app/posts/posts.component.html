@@ -1,11 +1,8 @@
-<div class="container-fluid">
-    <div class="jumbotron text-center">
+<div class="container">
+    <div class="">
         <h1>
-            <span translate>APP_NAME</span>
+            Posts
         </h1>
-        <p>
-            <i class="fa fa-bookmark-o"></i> <span translate>Version</span> {{version}}
-        </p>
 
         <ul>
             <li *ngFor="let post of results" (click)="goToPost( post.slug )">
