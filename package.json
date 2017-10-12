@@ -5,7 +5,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "npm run env -s && ng build --prod",
+    "build": "npm run env -s && ng build",
+    "build-prod": "ng build --prod --env=prod --output-path=www/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
