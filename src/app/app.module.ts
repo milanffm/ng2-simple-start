@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslateModule } from '@ngx-translate/core';
+
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -13,10 +13,8 @@ import { PostsModule } from './posts/posts.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 
-// AoT requires an exported function for factories
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
-}
+import { I18nService } from './services/i18n.service';
+
 
 @NgModule({
   declarations: [
@@ -25,20 +23,14 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   imports: [
     BrowserModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    }),
+    TranslateModule.forRoot(),
     HttpClientModule,
     HomeModule,
     AboutModule,
     PostsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [I18nService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,21 @@
+<div class="navbar-nav ml-auto">
+  <div class="nav-item" ngbDropdown placement="bottom-right">
+    <a id="language-dropdown" class="nav-link" ngbDropdownToggle>{{currentLanguage}}</a>
+    <div ngbDropdownMenu aria-labelledby="language-dropdown">
+      <button class="dropdown-item" *ngFor="let language of languages" (click)="setLanguage(language)">
+        {{language}}
+      </button>
+    </div>
+  </div>
+</div>
+
 <nav>
   <ul>
-    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-    <li><a routerLink="/posts" routerLinkActive="active">Posts</a></li>
+    <li><a routerLink="/home" routerLinkActive="active"><span translate>Home</span></a></li>
+    <li><a routerLink="/about" routerLinkActive="active"><span translate>About</span></a></li>
+    <li><a routerLink="/posts" routerLinkActive="active"><span translate>Posts</span></a></li>
   </ul>
 </nav>
+
+
+<h1><span translate>APP_NAME</span></h1>
