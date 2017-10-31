@@ -10,9 +10,9 @@ import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs/Observable';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 
-import { environment } from '../environments/environment';
-import { Logger } from './core/services/logger.service';
-import { I18nService } from './core/services/i18n.service';
+import { environment } from '@env/environment';
+import { Logger } from '@app/core/services/logger.service';
+import { I18nService } from '@app/core/services/i18n.service';
 
 const log = new Logger('App');
 
