@@ -6,7 +6,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "npm run env -s && ng build",
-    "build-prod": "ng build --prod --env=prod --output-path=www/",
+    "build-prod": "ng build --env=prod --prod --output-path=www/",
+    "translations:extract": "ngx-translate-extract --input ./src --output ./src/translations/template.json --format=json --clean -sort --marker extract",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -22,11 +23,14 @@
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
-    "core-js": "^2.4.1",
-    "rxjs": "^5.4.2",
-    "zone.js": "^0.8.14",
+    "@ngx-translate/core": "^8.0.0",
+    "@ngx-translate/http-loader": "^2.0.0",
     "bourbon": "^4.3.4",
-    "bourbon-neat": "^2.1.0"
+    "bourbon-neat": "^2.1.0",
+    "core-js": "^2.4.1",
+    "lodash": "^4.17.4",
+    "rxjs": "^5.4.2",
+    "zone.js": "^0.8.14"
   },
   "devDependencies": {
     "@angular/cli": "1.4.3",
@@ -44,6 +48,7 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "ngx-translate-extract": "^1.0.0",
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.3.2",

@@ -9,15 +9,17 @@ import { PostService } from '../services/post.service';
 })
 
 export class PostsComponent implements OnInit {
-    posts: [string];
+    posts: [object];
     constructor(
         private _router: Router,
         private _postService: PostService) {
     }
     ngOnInit() {
-        this._postService.getPosts()
-            .subscribe(resPostData => this.posts = resPostData.posts);
+       this._postService.getPosts().subscribe(data => {
+           console.log(data.posts);
+           this.posts = data.posts;
 
+       });
     }
     goToPost(slug: string) {
         this._router.navigate(['/posts/', slug]);

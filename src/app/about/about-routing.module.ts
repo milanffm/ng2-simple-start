@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { extract } from '../services/i18n.service';
 
 import { AboutComponent } from './about.component';
 
 const routes: Routes = [
-  { path: 'about', component: AboutComponent }
+  { path: 'about', component: AboutComponent, data: { title: extract('About')} }
 ];
 
 @NgModule({
