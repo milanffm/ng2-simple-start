@@ -11,8 +11,8 @@ import { Observable } from 'rxjs/Observable';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 
 import { environment } from '../environments/environment';
-import { Logger } from './services/logger.service';
-import { I18nService } from './services/i18n.service';
+import { Logger } from './core/services/logger.service';
+import { I18nService } from './core/services/i18n.service';
 
 const log = new Logger('App');
 

@@ -6,14 +6,13 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
 import { AboutModule } from './about/about.module';
 import { PostsModule } from './posts/posts.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-
-import { I18nService } from './services/i18n.service';
 
 
 @NgModule({
@@ -23,6 +22,7 @@ import { I18nService } from './services/i18n.service';
   ],
   imports: [
     BrowserModule,
+    CoreModule,
     TranslateModule.forRoot(),
     HttpClientModule,
     HomeModule,
@@ -30,7 +30,7 @@ import { I18nService } from './services/i18n.service';
     PostsModule,
     AppRoutingModule
   ],
-  providers: [I18nService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,9 +3,9 @@ import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 import { includes } from 'lodash';
 
 import { Logger } from './logger.service';
-import enUS from '../../translations/en-US.json';
-import deDE from '../../translations/de-DE.json';
-import frFR from '../../translations/fr-FR.json';
+import enUS from '../../../translations/en-US.json';
+import deDE from '../../../translations/de-DE.json';
+import frFR from '../../../translations/fr-FR.json';
 
 const log = new Logger('I18nService');
 const languageKey = 'language';
