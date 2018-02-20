@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { extract } from '@app/core/services/i18n.service';
+import { extract } from 'app/core/services/i18n.service';
 
 import { HomeComponent } from './home.component';
 

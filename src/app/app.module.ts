@@ -4,12 +4,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
 
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from '@app/app-routing.module';
 
 import { CoreModule } from '@app/core/core.module';
-import { HomeModule } from './home/home.module';
-import { AboutModule } from './about/about.module';
-import { PostsModule } from './posts/posts.module';
+import { HomeModule, AboutModule, PostsModule } from '@app/pages/';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';

@@ -5,7 +5,7 @@ p {
 }
 
 .icon {
-    @include icon('icon-arrow', 'after');
+    @include icon('icon-chevron-down2', 'after');
     &:after {
         top: 5px;
         font-size: $icon-small-font-size;
