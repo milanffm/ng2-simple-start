@@ -1,4 +1,6 @@
-@mixin cols(){
+@mixin cols( $grid: $custom-grid--no-margin){
+    @include grid-container();
+    @include grid-collapse($grid);
     .col {
         line-height: 1;
         position: relative;
@@ -8,27 +10,27 @@
     }
 
     .small {
-        @include grid-column(3, $custom-grid--no-margin);
+        @include grid-column(3,  $grid);
 
     }
 
     .medium  {
-        @include grid-column(6, $custom-grid--no-margin);
+        @include grid-column(6,  $grid);
 
 
     }
 
     .big {
-        @include grid-column(9, $custom-grid--no-margin);
+        @include grid-column(9,  $grid);
     }
 
     .right-col {
         float: right;
     }
 
-    @media all and (max-width: $xsamll-screen) {
+    @media all and (max-width: $xsmall-screen) {
         .small, .medium, .big {
-            @include grid-column(12, $custom-grid--no-margin);
+            @include grid-column(12,  $grid);
         }
 
         .small img {
