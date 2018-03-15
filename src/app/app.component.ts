@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
 
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs/Observable';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
@@ -26,7 +26,8 @@ export class AppComponent implements OnInit {
                 private activatedRoute: ActivatedRoute,
                 private titleService: Title,
                 private translateService: TranslateService,
-                private i18nService: I18nService) { }
+                private i18nService: I18nService,
+                private metaService: Meta) { }
 
 
   ngOnInit() {
@@ -42,7 +43,7 @@ export class AppComponent implements OnInit {
 
       const onNavigationEnd = this.router.events.filter(event => event instanceof NavigationEnd);
 
-      // Change page title on navigation or language change, based on route data
+      // Change page title and MetaDescription on navigation or language change, based on route data
       Observable.merge(this.translateService.onLangChange, onNavigationEnd)
           .map(() => {
               let route = this.activatedRoute;
@@ -58,6 +59,16 @@ export class AppComponent implements OnInit {
               if (title) {
                   this.titleService.setTitle(this.translateService.instant(title));
               }
+              if (event['metaDescriptionTranslationPath']) {
+                  this.translateService.get(event['metaDescriptionTranslationPath'])
+                      .subscribe((res: string) => {
+                          const tag = {name: 'description', content: res};
+                          const attributeSelector = 'name="description"';
+                          this.metaService.removeTag(attributeSelector);
+                          this.metaService.addTag(tag, false);
+                      });
+              }
           });
+
   }
 }

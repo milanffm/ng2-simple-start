@@ -5,7 +5,7 @@ import { extract } from 'app/core/services/i18n.service';
 import { PostsComponent } from './posts.component';
 
 const routes: Routes = [
-  { path: 'posts', component: PostsComponent, data: { title: extract('Posts')} },
+  { path: 'posts', component: PostsComponent, data: { title: extract('Posts'), metaDescriptionTranslationPath: extract('Post Meta Description')} },
   { path: 'posts/:slug', component: PostsComponent, data: { title: extract('Posts')} }
 ];
 

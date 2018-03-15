@@ -5,7 +5,7 @@ import { extract } from 'app/core/services/i18n.service';
 import { AboutComponent } from './about.component';
 
 const routes: Routes = [
-  { path: 'about', component: AboutComponent, data: { title: extract('About')} }
+  { path: 'about', component: AboutComponent, data: { title: extract('About'), metaDescriptionTranslationPath: extract('About Meta Description')} }
 ];
 
 @NgModule({
