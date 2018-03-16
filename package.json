@@ -6,7 +6,7 @@
     "ng": "ng",
     "start": "ng serve --aot",
     "build": "npm run env -s && ng build",
-    "build-prod": "ng build --env=prod --prod --output-path=www/",
+    "build-prod": "ng build --env=prod --prod",
     "translations:extract": "ngx-translate-extract --input ./src --output ./src/translations/template.json --format=json --clean -sort --marker extract",
     "test": "ng test",
     "lint": "ng lint",
