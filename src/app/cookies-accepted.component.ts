@@ -22,7 +22,7 @@ export class CookiesAcceptedComponent implements OnInit {
     }
 
     acceptCookies() {
-        this._cookiesService.setCookie(this.COOKIE, 'true', 365);
+        this._cookiesService.setCookie(this.COOKIE, 'true');
         this.checkCookieAccepted();
     }
 

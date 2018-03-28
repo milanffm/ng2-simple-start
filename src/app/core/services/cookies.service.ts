@@ -42,7 +42,7 @@ export class CookiesService {
      * @param {number} expireDays
      * @param {string} path
      */
-    public setCookie(name: string, value: string, expireDays: number, path: string = '') {
+    public setCookie(name: string, value: string, expireDays: number = 365, path: string = '') {
         const d: Date = new Date();
         d.setTime(d.getTime() + expireDays * 24 * 60 * 60 * 1000);
         const expires = `expires=${d.toUTCString()}`;
