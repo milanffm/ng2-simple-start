@@ -1,0 +1,13 @@
+<div (mouseenter)="pause()" (mouseleave)="play()" (swipeleft)="next()" (swiperight)="prev()"  [ngClass]="'carousel slide '+ customClass" >
+    <ol class="carousel-indicators" [hidden]="slides.length <= 1">
+        <li *ngFor="let slide of slides"  [class.active]="slide.active === true" (click)="select(slide)"></li>
+    </ol>
+    <div class="carousel-inner">
+        <ng-content></ng-content>
+    </div>
+    <div class="carousel-control" [hidden]="slides.length < 2">
+        <a class="left " (click)="prev()" [hidden]="getCurrentIndex() === 0 && noWrap" ></a>
+        <a class="right " (click)="next()" [hidden]="slides.length === getCurrentIndex() + 1 && noWrap"></a>
+    </div>
+
+</div>

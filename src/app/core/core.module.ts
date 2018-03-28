@@ -3,9 +3,10 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
-/* our own custom services  */
+/* custom services  */
 import { I18nService } from './services/i18n.service';
 import { PostService } from './services/post.service';
+import { CookiesService } from './services/cookies.service';
 
 @NgModule({
     imports: [
@@ -15,7 +16,8 @@ import { PostService } from './services/post.service';
     declarations: [],
     providers: [
         I18nService,
-        PostService
+        PostService,
+        CookiesService
     ]
 })
 export class CoreModule {
