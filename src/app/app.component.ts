@@ -11,10 +11,9 @@ import { Observable } from 'rxjs/Observable';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 
 import { environment } from '@env/environment';
-import { Logger } from '@app/core/services/logger.service';
 import { I18nService } from '@app/core/services/i18n.service';
 
-const log = new Logger('App');
+
 
 @Component({
   selector: 'app-root',
@@ -31,12 +30,8 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit() {
-      // Setup logger
-      if (environment.production) {
-          Logger.enableProductionMode();
-      }
 
-      log.debug('init');
+      console.log('init');
 
       // Setup translations
       this.i18nService.init(environment.defaultLanguage, environment.supportedLanguages);
