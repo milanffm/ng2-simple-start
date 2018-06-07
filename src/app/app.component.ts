@@ -15,12 +15,13 @@ import {I18nService} from '@app/core/services/i18n.service';
 	styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-	constructor(private router: Router,
-	            private activatedRoute: ActivatedRoute,
-	            private titleService: Title,
-	            private translateService: TranslateService,
-	            private i18nService: I18nService,
-	            private metaService: Meta) {
+	constructor(
+		private router: Router,
+		private activatedRoute: ActivatedRoute,
+		private titleService: Title,
+		private translateService: TranslateService,
+		private i18nService: I18nService,
+		private metaService: Meta) {
 	}
 
 
