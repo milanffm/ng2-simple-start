@@ -2,57 +2,81 @@
  * Global application theme.
  * Framework overrides and customization goes here.
  */
-
 @import "fonts";
 @import "elements";
 
-
 html {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
+
 *, *:before, *:after {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body {
-    background: $gray;
+	background: $gray;
 }
 
-html.home .navi a.home {color: $navi-hover-color;}
-html.salon .navi a.salon {color: $navi-hover-color;}
-html.attainment .navi a.attainment {color: $navi-hover-color;}
-html.lookbook .navi a.lookbook {color: $navi-hover-color;}
-html.products .navi a.products {color: $navi-hover-color;}
-html.team .navi a.team {color: $navi-hover-color;}
-html.prices .navi a.prices {color: $navi-hover-color;}
-html.jobs .navi a.jobs {color: $navi-hover-color;}
-html.contact .navi a.contact {color: $navi-hover-color;}
+html.home .navi a.home {
+	color: $navi-hover-color;
+}
+
+html.salon .navi a.salon {
+	color: $navi-hover-color;
+}
+
+html.attainment .navi a.attainment {
+	color: $navi-hover-color;
+}
+
+html.lookbook .navi a.lookbook {
+	color: $navi-hover-color;
+}
+
+html.products .navi a.products {
+	color: $navi-hover-color;
+}
+
+html.team .navi a.team {
+	color: $navi-hover-color;
+}
+
+html.prices .navi a.prices {
+	color: $navi-hover-color;
+}
+
+html.jobs .navi a.jobs {
+	color: $navi-hover-color;
+}
+
+html.contact .navi a.contact {
+	color: $navi-hover-color;
+}
 
 /**
 GOOGLE MAPS
  */
 
 .agm-info-window-content {
-    color: $gray-dark;
+	color: $gray-dark;
 }
 
 .link-magenta {
-    color: $brand-primary;
+	color: $brand-primary;
 }
-
 
 @media all and (max-width: $large-screen) {
 
-    body.menu-open {
-        .navi {
-            right: 0;
-        }
-        .inner-content {
-            transform: translate(-$navi-width, 0px);
-        }
+	body.menu-open {
+		.navi {
+			right: 0;
+		}
+		.inner-content {
+			transform: translate(-$navi-width, 0px);
+		}
 
-        .toggle-button {
-            transform: translate(-$navi-width, 0px);
-        }
-    }
+		.toggle-button {
+			transform: translate(-$navi-width, 0px);
+		}
+	}
 }

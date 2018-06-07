@@ -11,8 +11,8 @@ import {SharedModule} from '@app/shared/shared.module';
 import {HomeModule, AboutModule, PostsModule} from '@app/pages/';
 
 import {AppComponent} from './app.component';
-import {HeaderComponent} from './header/header.component';
-import {CookiesAcceptedComponent} from '@app/cookies-accepted.component';
+import {HeaderComponent} from './base-compontents/header/header.component';
+import {CookiesAcceptedComponent} from '@app/base-compontents/cookies-accepted/cookies-accepted.component';
 
 @NgModule({
 	declarations: [

@@ -1,160 +1,160 @@
 {
-  "IcoMoonType": "selection",
-  "icons": [
-    {
-      "icon": {
-        "paths": [
-          "M179.941 108.398v154.648l501.522 249.315-501.522 248.593v154.648l664.119-337.479v-132.246z"
-        ],
-        "attrs": [
-          {}
-        ],
-        "isMulticolor": false,
-        "isMulticolor2": false,
-        "grid": 0,
-        "tags": [
-          "arrow"
-        ]
-      },
-      "attrs": [
-        {}
-      ],
-      "properties": {
-        "order": 22,
-        "id": 3,
-        "name": "arrow",
-        "prevSize": 32,
-        "code": 59648
-      },
-      "setIdx": 0,
-      "setId": 7,
-      "iconIdx": 0
-    },
-    {
-      "icon": {
-        "paths": [
-          "M445.155 166.933h134.414v689.411h-134.414v-689.411z",
-          "M166.933 166.933h134.414v689.411h-134.414v-689.411z",
-          "M722.653 166.933h134.414v689.411h-134.414v-689.411z"
-        ],
-        "attrs": [
-          {},
-          {},
-          {}
-        ],
-        "isMulticolor": false,
-        "isMulticolor2": false,
-        "grid": 0,
-        "tags": [
-          "burger"
-        ]
-      },
-      "attrs": [
-        {},
-        {},
-        {}
-      ],
-      "properties": {
-        "order": 23,
-        "id": 2,
-        "name": "burger",
-        "prevSize": 32,
-        "code": 59649
-      },
-      "setIdx": 0,
-      "setId": 7,
-      "iconIdx": 1
-    },
-    {
-      "icon": {
-        "paths": [
-          "M169.101 263.046l247.147 247.147-250.038 249.315 95.39 95.39 250.038-250.038 249.315 250.038 95.39-95.39-250.038-249.315 248.593-248.593-95.39-95.39-247.87 248.593-247.147-247.147z"
-        ],
-        "attrs": [
-          {}
-        ],
-        "isMulticolor": false,
-        "isMulticolor2": false,
-        "grid": 0,
-        "tags": [
-          "close"
-        ]
-      },
-      "attrs": [
-        {}
-      ],
-      "properties": {
-        "order": 24,
-        "id": 1,
-        "name": "close",
-        "prevSize": 32,
-        "code": 59650
-      },
-      "setIdx": 0,
-      "setId": 7,
-      "iconIdx": 2
-    },
-    {
-      "icon": {
-        "paths": [
-          "M445.877 93.222v349.764h-353.378v134.414h353.378v353.378h134.414v-353.378h351.21v-134.414h-351.21v-349.764z"
-        ],
-        "attrs": [
-          {}
-        ],
-        "isMulticolor": false,
-        "isMulticolor2": false,
-        "grid": 0,
-        "tags": [
-          "plus"
-        ]
-      },
-      "attrs": [
-        {}
-      ],
-      "properties": {
-        "order": 25,
-        "id": 0,
-        "name": "plus",
-        "prevSize": 32,
-        "code": 59651
-      },
-      "setIdx": 0,
-      "setId": 7,
-      "iconIdx": 3
-    }
-  ],
-  "height": 1024,
-  "metadata": {
-    "name": "icomoon"
-  },
-  "preferences": {
-    "showGlyphs": true,
-    "showQuickUse": true,
-    "showQuickUse2": true,
-    "showSVGs": true,
-    "fontPref": {
-      "prefix": "icon-",
-      "metadata": {
-        "fontFamily": "icomoon"
-      },
-      "metrics": {
-        "emSize": 1024,
-        "baseline": 6.25,
-        "whitespace": 50
-      },
-      "embed": false
-    },
-    "imagePref": {
-      "prefix": "icon-",
-      "png": true,
-      "useClassSelector": true,
-      "color": 0,
-      "bgColor": 16777215,
-      "classSelector": ".icon"
-    },
-    "historySize": 100,
-    "showCodes": true,
-    "gridSize": 16
-  }
+	"IcoMoonType": "selection",
+	"icons": [
+		{
+			"icon": {
+				"paths": [
+					"M179.941 108.398v154.648l501.522 249.315-501.522 248.593v154.648l664.119-337.479v-132.246z"
+				],
+				"attrs": [
+					{}
+				],
+				"isMulticolor": false,
+				"isMulticolor2": false,
+				"grid": 0,
+				"tags": [
+					"arrow"
+				]
+			},
+			"attrs": [
+				{}
+			],
+			"properties": {
+				"order": 22,
+				"id": 3,
+				"name": "arrow",
+				"prevSize": 32,
+				"code": 59648
+			},
+			"setIdx": 0,
+			"setId": 7,
+			"iconIdx": 0
+		},
+		{
+			"icon": {
+				"paths": [
+					"M445.155 166.933h134.414v689.411h-134.414v-689.411z",
+					"M166.933 166.933h134.414v689.411h-134.414v-689.411z",
+					"M722.653 166.933h134.414v689.411h-134.414v-689.411z"
+				],
+				"attrs": [
+					{},
+					{},
+					{}
+				],
+				"isMulticolor": false,
+				"isMulticolor2": false,
+				"grid": 0,
+				"tags": [
+					"burger"
+				]
+			},
+			"attrs": [
+				{},
+				{},
+				{}
+			],
+			"properties": {
+				"order": 23,
+				"id": 2,
+				"name": "burger",
+				"prevSize": 32,
+				"code": 59649
+			},
+			"setIdx": 0,
+			"setId": 7,
+			"iconIdx": 1
+		},
+		{
+			"icon": {
+				"paths": [
+					"M169.101 263.046l247.147 247.147-250.038 249.315 95.39 95.39 250.038-250.038 249.315 250.038 95.39-95.39-250.038-249.315 248.593-248.593-95.39-95.39-247.87 248.593-247.147-247.147z"
+				],
+				"attrs": [
+					{}
+				],
+				"isMulticolor": false,
+				"isMulticolor2": false,
+				"grid": 0,
+				"tags": [
+					"close"
+				]
+			},
+			"attrs": [
+				{}
+			],
+			"properties": {
+				"order": 24,
+				"id": 1,
+				"name": "close",
+				"prevSize": 32,
+				"code": 59650
+			},
+			"setIdx": 0,
+			"setId": 7,
+			"iconIdx": 2
+		},
+		{
+			"icon": {
+				"paths": [
+					"M445.877 93.222v349.764h-353.378v134.414h353.378v353.378h134.414v-353.378h351.21v-134.414h-351.21v-349.764z"
+				],
+				"attrs": [
+					{}
+				],
+				"isMulticolor": false,
+				"isMulticolor2": false,
+				"grid": 0,
+				"tags": [
+					"plus"
+				]
+			},
+			"attrs": [
+				{}
+			],
+			"properties": {
+				"order": 25,
+				"id": 0,
+				"name": "plus",
+				"prevSize": 32,
+				"code": 59651
+			},
+			"setIdx": 0,
+			"setId": 7,
+			"iconIdx": 3
+		}
+	],
+	"height": 1024,
+	"metadata": {
+		"name": "icomoon"
+	},
+	"preferences": {
+		"showGlyphs": true,
+		"showQuickUse": true,
+		"showQuickUse2": true,
+		"showSVGs": true,
+		"fontPref": {
+			"prefix": "icon-",
+			"metadata": {
+				"fontFamily": "icomoon"
+			},
+			"metrics": {
+				"emSize": 1024,
+				"baseline": 6.25,
+				"whitespace": 50
+			},
+			"embed": false
+		},
+		"imagePref": {
+			"prefix": "icon-",
+			"png": true,
+			"useClassSelector": true,
+			"color": 0,
+			"bgColor": 16777215,
+			"classSelector": ".icon"
+		},
+		"historySize": 100,
+		"showCodes": true,
+		"gridSize": 16
+	}
 }

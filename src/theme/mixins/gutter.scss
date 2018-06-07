@@ -1,41 +1,40 @@
-@mixin cols( $grid: $custom-grid--no-margin){
-    @include grid-container();
-    @include grid-collapse($grid);
-    .col {
-        line-height: 1;
-        position: relative;
-        img {
-            display: block;
-        }
-    }
+@mixin cols( $grid: $custom-grid--no-margin) {
+	@include grid-container();
+	@include grid-collapse($grid);
+	.col {
+		line-height: 1;
+		position: relative;
+		img {
+			display: block;
+		}
+	}
 
-    .small {
-        @include grid-column(3,  $grid);
+	.small {
+		@include grid-column(3, $grid);
 
-    }
+	}
 
-    .medium  {
-        @include grid-column(6,  $grid);
+	.medium {
+		@include grid-column(6, $grid);
 
+	}
 
-    }
+	.big {
+		@include grid-column(9, $grid);
+	}
 
-    .big {
-        @include grid-column(9,  $grid);
-    }
+	.right-col {
+		float: right;
+	}
 
-    .right-col {
-        float: right;
-    }
+	@media all and (max-width: $xsmall-screen) {
+		.small, .medium, .big {
+			@include grid-column(12, $grid);
+		}
 
-    @media all and (max-width: $xsmall-screen) {
-        .small, .medium, .big {
-            @include grid-column(12,  $grid);
-        }
-
-        .small img {
-            margin: 0 auto;
-        }
-    }
+		.small img {
+			margin: 0 auto;
+		}
+	}
 
 }
