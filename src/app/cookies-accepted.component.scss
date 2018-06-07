@@ -1,39 +1,38 @@
 @import "../theme/include.scss";
 
 .cookies-accepted {
-    @include position(fixed, 0 0 null 0);
-    width: 100%;
-    background: rgba(0,0,0,0.8);
-    color: $white;
-    padding: 5px 15px;
-    z-index: 4;
-    p {
-        @include margin(10px null 5px);
-    }
+	@include position(fixed, 0 0 null 0);
+	width: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	color: $white;
+	padding: 5px 15px;
+	z-index: 4;
+	p {
+		@include margin(10px null 5px);
+	}
 }
 
 .button {
-    @include margin(10px null);
-    @include padding(5px);
-    width: 40px;
-    text-align: center;
-    background: $brand-primary;
-    color: $white;
-    cursor: pointer;
-    float: left;
+	@include margin(10px null);
+	@include padding(5px);
+	width: 40px;
+	text-align: center;
+	background: $brand-primary;
+	color: $white;
+	cursor: pointer;
+	float: left;
 }
 
 .more {
-    cursor: pointer;
-    display: block;
-    float: left;
-    margin: 16px;
+	cursor: pointer;
+	display: block;
+	float: left;
+	margin: 16px;
 }
 
-
 @media all and(max-width: $small-screen) {
-    .cookies-accepted {
-        padding-right: 50px;
-    }
+	.cookies-accepted {
+		padding-right: 50px;
+	}
 }
 

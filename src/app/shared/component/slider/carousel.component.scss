@@ -1,67 +1,68 @@
 @import "src/theme/include.scss";
 
 .carousel {
-    height: 600px;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+	height: 600px;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
 }
 
 .carousel-indicators {
-    display: none;
+	display: none;
 }
 
 .carousel-control {
-    z-index: 2;
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    margin-top: -12px;
+	z-index: 2;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	margin-top: -12px;
 }
 
 .right {
-    right: 0;
-    
-    @include icon('icon-chevron-right');
+	right: 0;
+
+	@include icon('icon-chevron-right');
 
 }
-.left  {
-    left: 0;
-    @include icon('icon-chevron-left');
+
+.left {
+	left: 0;
+	@include icon('icon-chevron-left');
 }
 
 .right, .left {
-    position: absolute;
-    cursor: pointer;
-    color: $link-color;
-    &:before {
-        font-size: 1.5rem;
-    }
+	position: absolute;
+	cursor: pointer;
+	color: $link-color;
+	&:before {
+		font-size: 1.5rem;
+	}
 
 }
 
-@media all and (max-width: $large-screen){
+@media all and (max-width: $large-screen) {
 
-    .carousel-control {
-        top: 25vw;
-    }
+	.carousel-control {
+		top: 25vw;
+	}
 
 }
 
 @media all and (max-width: $medium-screen) {
 
-    .carousel {
-        height: 86vw;
-        overflow: unset;
-    }
+	.carousel {
+		height: 86vw;
+		overflow: unset;
+	}
 
 }
 
-@media all and (max-width: $xsmall-screen){
+@media all and (max-width: $xsmall-screen) {
 
-    .carousel-control {
-        top: 25vh;
-    }
+	.carousel-control {
+		top: 25vh;
+	}
 
 }
 

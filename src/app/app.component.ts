@@ -10,56 +10,57 @@ import {I18nService} from '@app/core/services/i18n.service';
 
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-    constructor(private router: Router,
-                private activatedRoute: ActivatedRoute,
-                private titleService: Title,
-                private translateService: TranslateService,
-                private i18nService: I18nService,
-                private metaService: Meta) {
-    }
+	constructor(
+		private router: Router,
+		private activatedRoute: ActivatedRoute,
+		private titleService: Title,
+		private translateService: TranslateService,
+		private i18nService: I18nService,
+		private metaService: Meta) {
+	}
 
 
-    ngOnInit() {
+	ngOnInit() {
 
-        console.log('init');
+		console.log('init');
 
-        // Setup translations
-        this.i18nService.init(environment.defaultLanguage, environment.supportedLanguages);
+		// Setup translations
+		this.i18nService.init(environment.defaultLanguage, environment.supportedLanguages);
 
-        const onNavigationEnd = this.router.events.pipe(filter(event => event instanceof NavigationEnd));
+		const onNavigationEnd = this.router.events.pipe(filter(event => event instanceof NavigationEnd));
 
-        // Change page title and MetaDescription on navigation or language change, based on route data
-        merge(this.translateService.onLangChange, onNavigationEnd)
-            .pipe(
-                map(() => {
-                    let route = this.activatedRoute;
-                    while (route.firstChild) {
-                        route = route.firstChild;
-                    }
-                    return route;
-                }),
-                filter(route => route.outlet === 'primary'),
-                mergeMap(route => route.data)
-            )
-            .subscribe(event => {
-                const title = event['title'];
-                if (title) {
-                    this.titleService.setTitle(this.translateService.instant(title));
-                }
-                if (event['metaDescriptionTranslationPath']) {
-                    this.translateService.get(event['metaDescriptionTranslationPath'])
-                        .subscribe((res: string) => {
-                            const tag = {name: 'description', content: res};
-                            const attributeSelector = 'name="description"';
-                            this.metaService.removeTag(attributeSelector);
-                            this.metaService.addTag(tag, false);
-                        });
-                }
-            });
-    }
+		// Change page title and MetaDescription on navigation or language change, based on route data
+		merge(this.translateService.onLangChange, onNavigationEnd)
+			.pipe(
+				map(() => {
+					let route = this.activatedRoute;
+					while (route.firstChild) {
+						route = route.firstChild;
+					}
+					return route;
+				}),
+				filter(route => route.outlet === 'primary'),
+				mergeMap(route => route.data)
+			)
+			.subscribe(event => {
+				const title = event['title'];
+				if (title) {
+					this.titleService.setTitle(this.translateService.instant(title));
+				}
+				if (event['metaDescriptionTranslationPath']) {
+					this.translateService.get(event['metaDescriptionTranslationPath'])
+						.subscribe((res: string) => {
+							const tag = {name: 'description', content: res};
+							const attributeSelector = 'name="description"';
+							this.metaService.removeTag(attributeSelector);
+							this.metaService.addTag(tag, false);
+						});
+				}
+			});
+	}
 }

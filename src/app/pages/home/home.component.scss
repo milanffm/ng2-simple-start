@@ -1,13 +1,13 @@
 @import "src/theme/include";
 
 p {
-    background: $c-light-blue;
+	background: $c-light-blue;
 }
 
 .icon {
-    @include icon('icon-arrow', 'after');
-    &:after {
-        top: 5px;
-        font-size: $icon-small-font-size;
-    }
+	@include icon('icon-arrow', 'after');
+	&:after {
+		top: 5px;
+		font-size: $icon-small-font-size;
+	}
 }

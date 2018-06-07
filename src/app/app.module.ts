@@ -15,24 +15,24 @@ import {HeaderComponent} from './header/header.component';
 import {CookiesAcceptedComponent} from '@app/cookies-accepted.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        HeaderComponent,
-        CookiesAcceptedComponent
-    ],
-    imports: [
-        BrowserModule,
-        CoreModule,
-        SharedModule,
-        TranslateModule.forRoot(),
-        HttpClientModule,
-        HomeModule,
-        AboutModule,
-        PostsModule,
-        AppRoutingModule
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		HeaderComponent,
+		CookiesAcceptedComponent
+	],
+	imports: [
+		BrowserModule,
+		CoreModule,
+		SharedModule,
+		TranslateModule.forRoot(),
+		HttpClientModule,
+		HomeModule,
+		AboutModule,
+		PostsModule,
+		AppRoutingModule
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule {
 }
