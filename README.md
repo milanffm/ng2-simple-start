@@ -19,7 +19,7 @@ Run `npm run build-prod` to build the project. The build artifacts will be store
 
 ## Production test server
 
-go to `cd www/` and run `npm run serve-local` for a dev server. Navigate to `http://localhost:8080/`. Than you can test the services workers
+go to `cd www/` and run `http-server -c-1 .` for a dev server. Navigate to `http://localhost:8080/`. Than you can test the services workers
 
 ## Further help
 
