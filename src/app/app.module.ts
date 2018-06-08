@@ -12,6 +12,8 @@ import {HomeModule, AboutModule, PostsModule} from '@app/pages/';
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './base-compontents/';
 import {CookiesAcceptedComponent} from './base-compontents/';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '@env/environment';
 
 @NgModule({
 	declarations: [
@@ -28,7 +30,8 @@ import {CookiesAcceptedComponent} from './base-compontents/';
 		HomeModule,
 		AboutModule,
 		PostsModule,
-		AppRoutingModule
+		AppRoutingModule,
+		ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
 	],
 	providers: [],
 	bootstrap: [AppComponent]
