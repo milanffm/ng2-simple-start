@@ -2,6 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {TranslateModule} from '@ngx-translate/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {AppRoutingModule} from '@app/app-routing.module';
 
@@ -23,6 +24,7 @@ import { environment } from '@env/environment';
 	],
 	imports: [
 		BrowserModule,
+		BrowserAnimationsModule,
 		CoreModule,
 		SharedModule,
 		TranslateModule.forRoot(),

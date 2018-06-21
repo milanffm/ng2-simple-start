@@ -1,8 +1,5 @@
 @import "src/theme/include";
 
-p {
-	background: $c-light-blue;
-}
 
 .icon {
 	@include icon('icon-arrow', 'after');
