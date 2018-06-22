@@ -20,15 +20,15 @@
 }
 
 .right {
-	right: 0;
+	right: 20px;
 
-	@include icon('icon-chevron-right');
+	@include icon('icon-arrow');
 
 }
 
 .left {
-	left: 0;
-	@include icon('icon-chevron-left');
+	left: 20px;
+	@include icon('icon-arrow');
 }
 
 .right, .left {

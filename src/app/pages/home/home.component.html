@@ -7,7 +7,7 @@
 <div>
 	<span class="icon">Mehr</span>
 </div>
-<app-carousel>
+<app-carousel [noWrap]="noLoopSlides" [noPause]="noPause" [interval]="NextPhotoInterval" [setIndex]="setIndex">
 	<app-slide>
 		<h2>Slide Headline 1</h2>
 		<p>Slide Content</p>
