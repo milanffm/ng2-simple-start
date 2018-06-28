@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {NgModule, Injectable} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {TranslateModule} from '@ngx-translate/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +15,15 @@ import {HeaderComponent} from './base-compontents/';
 import {CookiesAcceptedComponent} from './base-compontents/';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '@env/environment';
+
+import {HammerGestureConfig, HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
+
+@Injectable()
+export class MyHammerConfig extends HammerGestureConfig {
+	overrides = <any>{
+		'pan': {velocity: 0.1, threshold: 8} // override default settings
+	};
+}
 
 @NgModule({
 	declarations: [
@@ -35,7 +44,10 @@ import { environment } from '@env/environment';
 		AppRoutingModule,
 		ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
 	],
-	providers: [],
+	providers: [{
+		provide: HAMMER_GESTURE_CONFIG,
+		useClass: MyHammerConfig
+	}],
 	bootstrap: [AppComponent]
 })
 export class AppModule {
