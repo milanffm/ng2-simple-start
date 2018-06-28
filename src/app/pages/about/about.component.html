@@ -2,3 +2,18 @@
 	about works!
 </p>
 <img src="http://via.placeholder.com/350x350" alt="">
+<span class="more" translate (click)="showModalHandler({})">Mehr dazu</span>
+<app-modal *ngIf="showModal"
+	(closeModal)="closeModalHandler({})">
+
+	<div class="dark-theme">
+		<h2 translate>ÜBER UNS</h2>
+		<p translate></p>
+
+		<div class="button-wrapper">
+			<span class="contact" translate routerLink="/kontakt/uebersicht">Kontakt</span>
+		</div>
+
+
+	</div>
+</app-modal>

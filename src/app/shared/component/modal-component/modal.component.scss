@@ -1,0 +1,41 @@
+@import "src/theme/include";
+
+.modal-bg {
+	@include position(fixed,0);
+	background: $black;
+	z-index: 8;
+}
+
+.close {
+	@include icon('icon-close');
+	@include position(absolute, 14px 55px null null);
+	cursor: pointer;
+	font-size: 40px;
+	&:before {
+		color: $white;
+	}
+}
+
+.modal {
+	@include position(fixed, 60px);
+	background: $white;
+	z-index: 9;
+	overflow-x: auto;
+
+	.content {
+		height: 100%;
+		@include padding(2%);
+		margin: 0 auto;
+		max-width: $modal-content-max-width;
+	}
+
+	&.dark-theme {
+		background: none;
+	}
+}
+
+@media all and (max-width: $large-screen) {
+	.modal {
+	}
+}
+

@@ -1,0 +1,12 @@
+<div class="modal-wrapper" *ngIf="showModal" [@modalAnimation] (click)="close($event)">
+	<div class="modal-bg">
+		<div class="close"></div>
+	</div>
+	<div [class]="modalClass + ' modal'">
+		<div class="content">
+			<ng-content></ng-content>
+		</div>
+	</div>
+</div>
+
+
