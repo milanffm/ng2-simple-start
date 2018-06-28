@@ -11,9 +11,6 @@ export class HomeComponent implements OnInit {
 	}
 
 	NextPhotoInterval = 3000;
-	noPause = true;
-	noLoopSlides = false;
-	setIndex = 1;
 
 	data: object;
 

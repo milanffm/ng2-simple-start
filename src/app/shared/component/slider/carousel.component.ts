@@ -18,9 +18,10 @@ export class CarouselComponent implements OnDestroy, OnChanges {
 	private currentSlide: SlideComponent;
 	private _interval: number;
 
-	@Input() public noWrap: boolean;
-	@Input() public noPause: boolean;
+	@Input() public noLoop = false;
+	@Input() public noPause = true;
 	@Input() public customClass: string;
+	@Input() public showController = true;
 	@Input() public setIndex = 1;
 
 	@Input()
@@ -161,7 +162,7 @@ export class CarouselComponent implements OnDestroy, OnChanges {
 		// console.log('next', this.getCurrentIndex());
 		const newIndex = (this.getCurrentIndex() + 1) % this.slides.length;
 
-		if (newIndex === 0 && this.noWrap) {
+		if (newIndex === 0 && this.noLoop) {
 			this.pause();
 			return;
 		}
@@ -175,7 +176,7 @@ export class CarouselComponent implements OnDestroy, OnChanges {
 	public prev() {
 		const newIndex = this.getCurrentIndex() - 1 < 0 ? this.slides.length - 1 : this.getCurrentIndex() - 1;
 
-		if (this.noWrap && newIndex === this.slides.length - 1) {
+		if (this.noLoop && newIndex === this.slides.length - 1) {
 			this.pause();
 			return;
 		}
