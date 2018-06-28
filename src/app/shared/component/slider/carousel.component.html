@@ -1,6 +1,6 @@
 <div (mouseenter)="pause()" (mouseleave)="play()" (swipeleft)="next()" (swiperight)="prev()"
 	[ngClass]="'carousel slide '+ customClass">
-	<ol class="carousel-indicators" [hidden]="slides.length <= 1">
+	<ol class="carousel-indicators" *ngIf="showIndicators" [hidden]="slides.length <= 1">
 		<li *ngFor="let slide of slides" [class.active]="slide.active === true" (click)="select(slide)"></li>
 	</ol>
 	<div class="carousel-inner">

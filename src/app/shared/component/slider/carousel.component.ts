@@ -20,8 +20,9 @@ export class CarouselComponent implements OnDestroy, OnChanges {
 
 	@Input() public noLoop = false;
 	@Input() public noPause = true;
-	@Input() public customClass: string;
+	@Input() public customClass = 'custom-carousel';
 	@Input() public showController = true;
+	@Input() public showIndicators = false;
 	@Input() public setIndex = 1;
 
 	@Input()

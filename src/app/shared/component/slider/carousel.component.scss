@@ -8,7 +8,9 @@
 }
 
 .carousel-indicators {
-	display: none;
+	z-index: 2;
+	position: absolute;
+	bottom: 0;
 }
 
 .carousel-control {

@@ -34,8 +34,6 @@ export class SlideComponent implements OnInit, OnDestroy, OnChanges {
 	@Input() public active: boolean;
 	@Input() public customClass: string;
 
-	@HostBinding('class.item')
-	@HostBinding('class.carousel-item')
 	private addClass = true;
 
 	constructor(private carousel: CarouselComponent) {
