@@ -36,7 +36,6 @@ export class ModalComponent implements OnInit, OnDestroy {
 	}
 
 	close(event) {
-		event.preventDefault();
 		const wrapper = this._el.nativeElement.querySelector('.modal-bg'),
 			closeBtn = this._el.nativeElement.querySelector('.close');
 		if (event.target === closeBtn || event.target === wrapper) {
