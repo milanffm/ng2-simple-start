@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, OnDestroy , Output, EventEmitter, Renderer2, ElementRef} from '@angular/core';
+import {Component, OnInit, Input , Output, EventEmitter, Renderer2, ElementRef, OnChanges} from '@angular/core';
 import {trigger, style, animate, transition} from '@angular/animations';
 
 
@@ -20,7 +20,7 @@ import {trigger, style, animate, transition} from '@angular/animations';
 		),
 	]
 })
-export class ModalComponent implements OnInit, OnDestroy {
+export class ModalComponent implements OnInit, OnChanges {
 
 	state = 'inactive';
 
@@ -29,7 +29,6 @@ export class ModalComponent implements OnInit, OnDestroy {
 	@Output() closeModal = new EventEmitter<boolean>();
 
 	constructor(private _el: ElementRef, private _rd: Renderer2) {
-		this._rd.addClass(document.body, 'modal-open');
 	}
 
 	ngOnInit() {
@@ -42,9 +41,11 @@ export class ModalComponent implements OnInit, OnDestroy {
 			this.closeModal.emit();
 			this.showModal = false;
 		}
-	}
-	ngOnDestroy() {
 		this._rd.removeClass(document.body, 'modal-open');
 	}
-
+	ngOnChanges() {
+		if (this.showModal) {
+			this._rd.addClass(document.body, 'modal-open');
+		}
+	}
 }
