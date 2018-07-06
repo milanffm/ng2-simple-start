@@ -23,9 +23,9 @@ import {trigger, style, animate, transition} from '@angular/animations';
 export class ModalComponent implements OnInit, OnDestroy {
 
 	state = 'inactive';
-	showModal = true;
 
 	@Input() modalClass: string;
+	@Input() showModal: false;
 	@Output() closeModal = new EventEmitter<boolean>();
 
 	constructor(private _el: ElementRef, private _rd: Renderer2) {

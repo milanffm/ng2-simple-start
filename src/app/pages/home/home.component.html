@@ -9,18 +9,27 @@
 </div>
 <app-carousel >
 	<app-slide>
-		<h2>Slide Headline 111</h2>
-		<p>Slide Content</p>
-		<img src="https://via.placeholder.com/350x150">
+		<div class="image" style="background-image: url('https://via.placeholder.com/250x250')"></div>
+		<h2>...Slider Text. 1...</h2>
 	</app-slide>
 	<app-slide>
-		<h2>Slide Headline 2</h2>
-		<p>Slide Content</p>
-		<img src="https://via.placeholder.com/350x250">
+		<div class="image" style="background-image: url('https://via.placeholder.com/350x250')"></div>
+		<h2>...Slider Text 2...</h2>
 	</app-slide>
 	<app-slide>
-		<h2>Slide Headline 3</h2>
-		<p>Slide Content</p>
-		<img src="https://via.placeholder.com/350x550">
+		<div class="image" style="background-image: url('https://via.placeholder.com/350x250')"></div>
+		<h2>...Slider Text 3...</h2>
 	</app-slide>
 </app-carousel>
+
+<div (click)="showModal = true">Open Modal</div>
+
+<app-modal [showModal]="showModal" (closeModal)="closeModalHandler()"  >
+
+	<div class="modal-content">
+		<h2>Modal Content</h2>
+		<p>Modal Content</p>
+	</div>
+
+</app-modal>
+

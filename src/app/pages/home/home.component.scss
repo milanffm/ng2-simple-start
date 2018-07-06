@@ -8,3 +8,7 @@
 		font-size: $icon-small-font-size;
 	}
 }
+
+@include slider-content();
+
+@include modal-content();

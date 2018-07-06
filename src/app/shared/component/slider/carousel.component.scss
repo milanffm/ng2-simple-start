@@ -1,7 +1,7 @@
 @import "src/theme/include.scss";
 
 .carousel {
-	height: 600px;
+	height: $carousel-height;
 	width: 100%;
 	overflow: hidden;
 	position: relative;
@@ -39,31 +39,6 @@
 	color: $link-color;
 	&:before {
 		font-size: 1.5rem;
-	}
-
-}
-
-@media all and (max-width: $large-screen) {
-
-	.carousel-control {
-		top: 25vw;
-	}
-
-}
-
-@media all and (max-width: $medium-screen) {
-
-	.carousel {
-		height: 86vw;
-		overflow: unset;
-	}
-
-}
-
-@media all and (max-width: $xsmall-screen) {
-
-	.carousel-control {
-		top: 25vh;
 	}
 
 }

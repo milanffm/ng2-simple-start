@@ -19,9 +19,10 @@ import { environment } from '@env/environment';
 import {HammerGestureConfig, HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
 
 @Injectable()
-export class MyHammerConfig extends HammerGestureConfig {
+export class CustomHammerConfig extends HammerGestureConfig  {
 	overrides = <any>{
-		'pan': {velocity: 0.1, threshold: 8} // override default settings
+		'pinch': { enable: false },
+		'rotate': { enable: false }
 	};
 }
 
@@ -46,7 +47,7 @@ export class MyHammerConfig extends HammerGestureConfig {
 	],
 	providers: [{
 		provide: HAMMER_GESTURE_CONFIG,
-		useClass: MyHammerConfig
+		useClass: CustomHammerConfig
 	}],
 	bootstrap: [AppComponent]
 })

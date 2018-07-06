@@ -6,29 +6,42 @@ import {animate, query, stagger, style, transition, trigger, group} from '@angul
 @Component({
 	selector: 'app-slide',
 	template: `
-        <div [class.active]="active" *ngIf="active" [ngClass]="'item ' + customClass" [@image] >
+        <div [class.active]="active" *ngIf="active" [ngClass]="'item ' + customClass" [@image] [@text] >
             <ng-content></ng-content>
         </div>
     `,
 	styleUrls: ['./slide.compontent.scss'],
 	animations: [
-		trigger('image', [
+		trigger('text', [
 			transition(':enter', [
-				query('*', [
+				query('h2', [
 					style({  opacity: 0 }),
-				]),
-				query('*', [
+				], { optional: true}),
+				query('h2', [
 					style({ transform: 'translateY(100px)' }),
 					stagger(100, [
 						animate('1200ms cubic-bezier(0.35, 0, 0.25, 1)', style('*'))
 					])
-				], { delay: 500 })
+				], {delay: 500, optional: true})
 			]),
 			transition(':leave', [
-				query('*', [
-					animate('500ms', style({ transform: 'translateY(50px)', opacity: 0 }))
-				])
+				query('h2', [
+					animate('1.2s', style({ opacity: 0, transform: 'translateY(-100px)' }))
+				], { optional: true})
 			])
+		]),
+		trigger('image', [
+			transition(':enter', [
+				query('.image', [
+					style({ opacity: 0}),
+					animate('1.2s', style({ opacity: 1}))
+				], { optional: true})
+			]),
+			transition(':leave', [
+				query('.image', [
+					animate('1.2s', style({ opacity: 0}))
+				], { optional: true})
+			]),
 		])
 	]
 })

@@ -11,6 +11,10 @@
 	@include position(absolute, 14px 55px null null);
 	cursor: pointer;
 	font-size: 40px;
+	top: 5px;
+	right: -3px;
+	width: 50px;
+	height: 50px;
 	&:before {
 		color: $white;
 	}

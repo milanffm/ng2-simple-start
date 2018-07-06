@@ -12,7 +12,7 @@ import {I18nService} from '@app/core/services/i18n.service';
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
-	styleUrls: ['./app.component.css']
+	styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
 	constructor(
@@ -62,5 +62,13 @@ export class AppComponent implements OnInit {
 						});
 				}
 			});
+
+		// Scroll to top of the page after every router change
+		this.router.events.subscribe((evt) => {
+			if (!(evt instanceof NavigationEnd)) {
+				return;
+			}
+			window.scrollTo(0, 0);
+		});
 	}
 }
