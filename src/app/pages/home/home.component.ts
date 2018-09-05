@@ -8,7 +8,7 @@ import {Component, OnInit} from '@angular/core';
 export class HomeComponent implements OnInit {
 
 	showModal = false;
-	NextPhotoInterval = 3000;
+	NextPhotoInterval = 5000;
 
 	constructor() {
 	}
