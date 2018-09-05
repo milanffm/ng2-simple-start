@@ -1,6 +1,6 @@
 {
-  "name": "ng2-simple-start",
-  "short_name": "ng2-simple-start",
+  "name": "Graphicon Web App",
+  "short_name": "graphicon",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
