@@ -24,7 +24,8 @@
 	@include position(fixed, 60px);
 	background: $white;
 	z-index: 9;
-	overflow-x: auto;
+	overflow-y: scroll; /* has to be scroll, not auto */
+  	-webkit-overflow-scrolling: touch;
 
 	.content {
 		height: 100%;
