@@ -6,6 +6,7 @@ import {HttpClientModule} from '@angular/common/http';
 /* custom services  */
 import {I18nService} from './services/i18n.service';
 import {PostService} from './services/post.service';
+import {LoginService} from './services/login.service';
 import {CookiesService} from './services/cookies.service';
 
 @NgModule({
@@ -17,6 +18,7 @@ import {CookiesService} from './services/cookies.service';
 	providers: [
 		I18nService,
 		PostService,
+		LoginService,
 		CookiesService
 	]
 })

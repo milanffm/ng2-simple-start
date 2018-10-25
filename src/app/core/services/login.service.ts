@@ -12,11 +12,12 @@ import { catchError, retry } from 'rxjs/operators';
 @Injectable()
 export class LoginService {
 	private _loginUrl = `${baseUrl}auth/local`; // the api url where we need to make a call
+	private _internUrl = `${baseUrl}interns`; // the api url where we need to make a call
 	constructor(private _http: HttpClient) {} // this initialized the HttpClient which we use to do a post or get call
 
 	// setting body of the parameters to send via post
 	private body = new HttpParams()
-		.set('username', 'mitglied')
+		.set('identifier', 'mitglied')
 		.set('password', 'dienstag');
 
 	checkLogin() {
@@ -31,6 +32,19 @@ export class LoginService {
 				catchError(this.handleError) // then handle the error
 			);
 	}
+
+	getIntern(jwt) {
+		return this._http.get(this._internUrl,
+			{
+				headers: new HttpHeaders()
+					.set('Authorization', 'Bearer ' + jwt)
+			}
+		)
+			.pipe(
+				catchError(this.handleError) // then handle the error
+			);
+	}
+
 
 	private handleError(error: HttpErrorResponse) {
 		if (error.error instanceof ErrorEvent) {
