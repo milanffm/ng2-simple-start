@@ -7,10 +7,13 @@
 		<span translate>test text</span>
 
 		<ul>
-			<li *ngFor="let post of posts" (click)="goToPost( post.slug )">
+			<li *ngFor="let post of posts" (click)="goToPost( post._id )">
 
 				<h2>{{ post.title }}</h2>
-				<div [innerHTML]="post.content.extended">
+				<img *ngIf="post.image" [src]="backendUrl + post.image.url">
+				<div [innerHTML]="post.content">
+				</div>
+				<div [innerHTML]="post.second-content">
 				</div>
 			</li>
 		</ul>

@@ -1,20 +1,23 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {environment} from '@env/environment';
+import {Observable} from 'rxjs/internal/Observable';
+const baseUrl = `${environment.apiUrl}`;
 
 interface Posts {
 	posts: [object];
 }
 
-@Injectable()
+@Injectable({
+	providedIn: 'root'
+})
 export class PostService {
-
-	postsUrl = 'http://localhost:3000/api/post/list';
 
 	constructor(private http: HttpClient) {
 	}
 
-	getPosts() {
-		return this.http.get<Posts>(this.postsUrl);
+	public getPosts(): Observable<any[]> {
+		return this.http.get<Posts[]>(`${baseUrl}posts`);
 	}
 
 }
