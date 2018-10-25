@@ -34,14 +34,14 @@ export class PostsComponent implements OnInit {
 	login() {
 		this._loginService.checkLogin().subscribe(res =>  {
 			this.test = res;
-			this.jwt = res.jwt;
-			console.log(this.jwt);
+			// this.jwt = res.jwt;
+			console.log(this.test);
 			this.getIntern();
 		});
 	}
 
 	getIntern() {
-		this._loginService.getIntern(this.jwt).subscribe(res =>  {
+		this._loginService.getIntern(this.test.jwt).subscribe(res =>  {
 			console.log(res);
 		});
 	}
