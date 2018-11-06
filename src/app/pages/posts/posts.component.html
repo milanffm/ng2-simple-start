@@ -6,11 +6,11 @@
 
 		<span translate>test text</span>
 
-		<ul>
-			<li *ngFor="let post of posts" (click)="goToPost( post.slug )">
+		<ul *ngIf="data">
+			<li *ngFor="let post of data.posts" (click)="goToPost( post.slug )">
 
 				<h2>{{ post.title }}</h2>
-				<div [innerHTML]="post.content.extended">
+				<div [innerHTML]="post.html | safeHtml">
 				</div>
 			</li>
 		</ul>

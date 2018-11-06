@@ -5,6 +5,8 @@ import {CarouselComponent} from './component/slider/carousel.component';
 import {SlideComponent} from './component/slider/slide.component';
 import {ModalComponent} from './component/modal-component/modal.component';
 
+import {SafeHTML} from './safe-html.pipe';
+
 @NgModule({
 	imports: [
 		CommonModule
@@ -12,12 +14,14 @@ import {ModalComponent} from './component/modal-component/modal.component';
 	declarations: [
 		CarouselComponent,
 		SlideComponent,
-		ModalComponent
+		ModalComponent,
+		SafeHTML
 	],
 	exports: [
 		CarouselComponent,
 		SlideComponent,
-		ModalComponent
+		ModalComponent,
+		SafeHTML
 	]
 })
 export class SharedModule {
