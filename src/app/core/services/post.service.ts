@@ -18,4 +18,8 @@ export class PostService {
 	getPosts() {
 		return this.http.get(ghost.url.api('posts', {limit: 3}));
 	}
+
+	getSportNews() {
+		return this.http.get('https://sportnews-json.triathlon.one/');
+	}
 }

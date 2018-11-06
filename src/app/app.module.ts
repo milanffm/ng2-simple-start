@@ -8,7 +8,7 @@ import {AppRoutingModule} from '@app/app-routing.module';
 
 import {CoreModule} from '@app/core/core.module';
 import {SharedModule} from '@app/shared/shared.module';
-import {HomeModule, AboutModule, PostsModule} from '@app/pages/';
+import {HomeModule, AboutModule, PostsModule, NewsModule} from '@app/pages/';
 
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './base-compontents/';
@@ -42,6 +42,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
 		HomeModule,
 		AboutModule,
 		PostsModule,
+		NewsModule,
 		AppRoutingModule,
 		ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
 	],
