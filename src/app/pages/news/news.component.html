@@ -5,5 +5,18 @@
 		</h1>
 
 		<span translate>test text</span>
+
+		<ul *ngIf="data">
+			<li *ngFor="let news of data" (click)="goToPost( news.slug )">
+
+				<h2>{{ news.head.title }}</h2>
+				<div class="content">
+					{{news.body.content}}
+					<p *ngFor="let p of news.body['body.content'].p">{{p}}</p>
+				</div>
+				<!--<div [innerHTML]="news.html | safeHtml">
+				</div>-->
+			</li>
+		</ul>
 	</div>
 </div>
